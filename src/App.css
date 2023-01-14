@@ -1,38 +1,78 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  background: linear-gradient(to right, #E14D2A, #FF597B);
+}
+.container{
+  background: #5BC0F8;
+  justify-content: center;
+  padding: 50px 0;
+  margin: 2rem auto;
+  border-radius: 40px;
+  box-shadow: 25px 25px 75px #0081C9, -12px -12px 14px #666 inset, 6px 6px 5px #666 inset;
+  width: 450px;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(6rem, auto) repeat(4, 5rem);
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.buttons>button {
+  box-shadow: 25px 25px 75px #484848,
+    -12px -12px 12px #F8F4EA inset,
+    5px 5px 16px #F8F4EA inset;
+  cursor: pointer;
+  border-radius: 12px;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  background-color: #ECE8DD;
+  margin: 5px;
+  color: black;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.buttons>button:hover {
+  background-color: #9D3C72;
+  box-shadow: 25px 25px 75px #C85C8E, -12px -12px 12px #C85C8E inset, 5px 5px 16px #C85C8E inset;
+
+}
+.buttons>button:active {
+  background-color: #F49D1A;
+  box-shadow: 25px 25px 75px #FFE15D, -12px -12px 12px #FFE15D inset, 5px 5px 16px #FFE15D inset;
+
+}
+
+buttons>button:focus {
+  margin: 6px;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  width: 80%;
+  background-color: #FCFFE7;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin: 2rem auto;
+  height: 60px;
+  color: #1A120B;
+  font-size: 24px;
+  text-align: right;
+}
+
+
+.output .current-operand {
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-size: 2.5rem;
 }
